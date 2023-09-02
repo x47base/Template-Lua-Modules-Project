@@ -13,7 +13,7 @@ Github: x47base
 
 local config = require(script.Parent.config)
 
-for _, module in pairs(script:GetChildren()) do
+for _, module in pairs(script.Parent.modules:GetChildren()) do
     if not module:IsA("ModuleScript") then return end;
     local loadMod = coroutine.create(function()
         require(module)
